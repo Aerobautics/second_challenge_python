@@ -5,7 +5,7 @@ import math
 from geometry_msgs.msg import PoseStamped
 
 def secondChallenge():
-	waypointPublisher = rospy.Publisher("/mavros/setpoint_position/local", PoseStamped, queueSize = 10)
+	waypointPublisher = rospy.Publisher("/mavros/setpoint_position/local", PoseStamped, queue_size = 10)
 	rospy.init_node('second_challenge_python', anonymous = True)
 	publishingRate = 10
 	waypointRate = rospy.Rate(publishingRate) # Input in Hertz, must be greater than 2 Hz
